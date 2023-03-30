@@ -4,65 +4,34 @@ import math
 import matplotlib.pyplot as plt
 import itertools
 
-class Animal_Agent():
+class Moss_Agent():
 
     '''
-    An Animal_Agent class. 
+    A Moss_Agent class. 
     '''
-    
-    def __init__(self,xmax=100,ymax=100,ptype="Prey",sex="M",age_limit=50,catch_radius=10,mate_range=5,gestation=8,shape="o",color="saddlebrown",saturation_pop=150):
+    # Changed default age limit to random integer between 8 and 10
+    def __init__(self,xmax=100,ymax=100,sex="M",age_limit=random.randint(8,10),shape="o",color="saddlebrown"):
         '''
         Initaliazes an animal agent object, an autonomous agent that can interact with other agents. Specifically, predators can hunt prey,
         prey can procreate, and both predator and prey can move around and age. 
 
         xmax (int): The (x) size of the habitat
         ymax (int): The (y) size of the habitat
-        pytpe (string): Sets whether this is a predator or prey type of animal
-        sex (string): Sets the sex of the animal
         age_limit (int): Sets the age at which the animal dies of old age
-        catch_radius (int): Specifies how far away a predator can find/catch prey
-        mate_range (int): Specifies how far away a prey can find a mate
-        gestation (int): How long does an animal need to wait between mating cycles
         shape (string): Specifies the marker to use when visualizing the animal
         color (string): Specifies the color to use when visualizing the animal
-        saturation_pop (int): The saturation population, where the environment can no longer support the prey
-        is_caught (bool): Flag for determining whether prey has been caught by a predator
         '''
         self.x = random.randint(0, xmax)
         self.y = random.randint(0, ymax)
         self.age = 0 
-        self.ptype = ptype
         self.age_limit = age_limit
         self.catch_radius = catch_radius
         self.xmax = xmax
         self.ymax = ymax
-        self.sex = sex
-        self.gestation = gestation
         self.last_litter_time = 1
-        self.mate_range = mate_range 
         self.color = color
         self.shape = shape
-        self.saturation_pop = saturation_pop
-        self.is_caught = False
 
-    def roaming(self,vx=7,vy=7): 
-        '''
-        Method to proceed random walk. Checks to make sure that the position it is trying to move into is within the bounds of 
-        the environment. 
-        '''
-        dx = np.random.randint(-vx,vx)
-        dy = np.random.randint(-vy,vy)
-
-        if (self.x + dx > self.xmax) or (self.x + dx < 0):
-            self.x -= dx
-        else:
-            self.x += dx
-
-        if (self.y + dy > self.ymax) or (self.y + dy < 0):
-            self.y -= dy
-        else:
-            self.y += dy
-        # print(self.x,self.y)
 
     # If no allele set, randomize between 0 and 1 for each allele
     def set_allele(self, alle_d = random.uniform(0,1), alle_m=random.uniform(0,1)):
