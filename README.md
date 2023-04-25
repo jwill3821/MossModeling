@@ -14,7 +14,7 @@
 
 *plot_environment*: creates a plot of the environment and its agents.
 
-*simulate*: iterates over the agent list and calls their replicate, aging, and `check_if_dead` methods. It also updates the environment array and the list of agents based on the new agents and dead agents. It then calls `plot_environment` to display the updated environment. The simulation runs for a fixed number of time steps, during which agents move, age, and replicate. Agents have a limited lifespan, after which they die.
+*simulate*: It updates the environment array and the list of agents based on the new agents and dead agents. It then calls `plot_environment` to display the updated environment. The simulation runs for a fixed number of time steps, during which agents move, age, and replicate. Agents have a limited lifespan, after which they die.
 
 The `Moss_Agent` and `Weed_Agent` classes inherit from the `Environment` class. They represent agents in the simulation that are placed in the environment array. `Moss_Agent` and `Weed_Agent` are identical except for their replicate method.
 
