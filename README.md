@@ -41,11 +41,11 @@ This repository contains the following:
 Group Members and Tasks
 --------------------------------------
 
-1. Baseline: Ben
-2. Compelxity: Jason, Carrie
-3. Presentation: Ella
-4. Write-up: Tori
-5. Readme: Sanskriti
+1. **Baseline**: Ben
+2. **Compelxity**: Jason, Carrie
+3. **Presentation**: Ella
+4. **Write-up**: Tori
+5. **Readme**: Sanskriti
 
 
 Report/closeout
