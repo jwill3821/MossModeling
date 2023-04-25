@@ -31,7 +31,7 @@ The size of the environment and the number of trees can be adjusted by changing 
 Contents
 ===========
 This repository contains the following:
-1. `README_CMSE.md`: This document. 
+1. `README.md`: This document. 
 2. `Project_Script.ipynb`: Main notebook where all the code is being run
 3. `CMSE_202_Moss`: PowerPoint Presentation that highlights the motivation, results, future scope etc.
 4. `To_Dos`: List of tasks group members need to do to address bugs in the code, make changes to it, and add parameters.
